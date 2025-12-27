@@ -1,0 +1,245 @@
+[2025-11-07 14:25:53 UTC] vlib work && vlog '-timescale' '1ns/1ns' +incdir+$RIVIERA_HOME/vlib/uvm-1.2/src -l uvm_1_2 -err VCP2947 W9 -err VCP2974 W9 -err VCP3003 W9 -err VCP5417 W9 -err VCP6120 W9 -err VCP7862 W9 -err VCP2129 W9 design.sv testbench.sv  && vsim -c -do run.do 
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = /home/runner/work/work.lib
+MESSAGE_SP VCP2124 "Package uvm_pkg found in library uvm_1_2."
+WARNING VCP2597 "Some unconnected ports remain at instance: dut. Module ahb_slave has unconnected  port(s) : resetn." "testbench.sv" 47  1
+WARNING VCP2803 "Function tr.randomize result is ignored." "ahb_sequence.sv" 32  16
+WARNING VCP2803 "Function tr.randomize result is ignored." "ahb_sequence.sv" 46  16
+WARNING VCP2803 "Function tr.randomize result is ignored." "ahb_sequence.sv" 63  18
+WARNING VCP2803 "Function tr.randomize result is ignored." "ahb_sequence.sv" 79  18
+WARNING VCP2803 "Function tr.randomize result is ignored." "ahb_sequence.sv" 96  18
+WARNING VCP2803 "Function tr.randomize result is ignored." "ahb_sequence.sv" 112  18
+MESSAGE "Unit top modules: tb_ahb_slave."
+SUCCESS "Compile success 0 Errors 7 Warnings  Analysis time: 4[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2023.04.112.8911 built for Linux64 on May 12, 2023.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2023 Aldec, Inc. All rights reserved.
+vsim +access+r;
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Package 'uvm_pkg' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.8 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/usr/share/Riviera-PRO/bin/libsystf.so'
+# ELAB2: Create instances ...
+# KERNEL: Info: Loading library:  /usr/share/Riviera-PRO/bin/uvm_1_2_dpi
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.1 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 2 (22.22%) other processes in SLP
+# SLP: 23 (0.08%) signals in SLP and 120 (0.39%) interface signals
+# ELAB2: Elaboration final pass complete - time: 2.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 30095 kB (elbread=2102 elab2=23044 kernel=4949 sdf=0)
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: UVM-1.2
+# KERNEL: (C) 2007-2014 Mentor Graphics Corporation
+# KERNEL: (C) 2007-2014 Cadence Design Systems, Inc.
+# KERNEL: (C) 2006-2014 Synopsys, Inc.
+# KERNEL: (C) 2011-2013 Cypress Semiconductor Corp.
+# KERNEL: (C) 2013-2014 NVIDIA Corporation
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: 
+# KERNEL:   ***********       IMPORTANT RELEASE NOTES         ************
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_NO_DEPRECATED undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# KERNEL: 
+# KERNEL:       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# KERNEL: 
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+run -all;
+# KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test ahb_test...
+# KERNEL: UVM_INFO /home/runner/ahb_env.sv(36) @ 0: uvm_test_top.env [ahb_env] Building AHB environment...
+# KERNEL: UVM_INFO /home/runner/ahb_env.sv(68) @ 0: uvm_test_top.env [ahb_env] Connections established successfully.
+# KERNEL: UVM_INFO /home/runner/ahb_env.sv(79) @ 0: uvm_test_top.env [ahb_env] Environment setup complete:
+# KERNEL:  Driver=uvm_test_top.env.drv
+# KERNEL:  Monitor=uvm_test_top.env.mon
+# KERNEL:  Scoreboard=uvm_test_top.env.sb
+# KERNEL:  Subscriber=uvm_test_top.env.sub
+# KERNEL:  Sequencer=uvm_test_top.env.seqr
+# KERNEL: UVM_INFO /home/runner/ahb_test.sv(49) @ 0: uvm_test_top [AHB_TEST] Starting AHB Base Sequence...
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(41) @ 0: uvm_test_top.env.mon [ahb_monitor] Monitor started...
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(36) @ 0: uvm_test_top.env.drv [ahb_driver] Driver started...
+# KERNEL: UVM_INFO /home/runner/testbench.sv(77) @ 25000: reporter [TB] Reset Deasserted
+# KERNEL: UVM_INFO /home/runner/ahb_sequence.sv(20) @ 75000: uvm_test_top.env.seqr@@seq [ahb_base_sequence] Starting AHB base sequence...
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 75000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x10 | hwrite=1 | hsize=2 | hburst=0 | hprot=0xb | hwdata=0xdeadbeef | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 105000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x10 Data=0xdeadbeef HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 105000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x10, Burst=0, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 105000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0x00000000
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 105000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x10 Data=0xdeadbeef (Burst=0)
+# KERNEL: UVM_INFO /home/runner/ahb_sequence.sv(34) @ 105000: uvm_test_top.env.seqr@@seq [ahb_base_sequence] SINGLE WRITE: AHB_TXN :: haddr=0x10 | hwrite=1 | hsize=2 | hburst=0 | hprot=0xb | hwdata=0xdeadbeef | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=1 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 115000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x10 | hwrite=0 | hsize=2 | hburst=0 | hprot=0x8 | hwdata=0x3387cfd9 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 145000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x10 Data=0xdeadbeef HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 145000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x10, Burst=0, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 145000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xdeadbeef
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 145000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x10 Data=0xdeadbeef (Burst=0)
+# KERNEL: UVM_INFO /home/runner/ahb_sequence.sv(48) @ 145000: uvm_test_top.env.seqr@@seq [ahb_base_sequence] SINGLE READ: AHB_TXN :: haddr=0x10 | hwrite=0 | hsize=2 | hburst=0 | hprot=0x8 | hwdata=0x3387cfd9 | hrdata=0xdeadbeef | hsel=1 | hready=1 | hready_out=1 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_sequence.sv(54) @ 165000: uvm_test_top.env.seqr@@seq [ahb_base_sequence] Starting Incremental Burst WRITE (4-beat)...
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 165000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x20 | hwrite=1 | hsize=2 | hburst=1 | hprot=0x6 | hwdata=0xbeef0000 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 195000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x20 Data=0xbeef0000 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 195000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x20, Burst=1, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 195000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xdeadbeef
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 195000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x20 Data=0xbeef0000 (Burst=1)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 205000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x24 | hwrite=1 | hsize=2 | hburst=1 | hprot=0x2 | hwdata=0xbeef0001 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 235000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x24 Data=0xbeef0001 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 235000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x24, Burst=1, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 235000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xdeadbeef
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 235000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x24 Data=0xbeef0001 (Burst=1)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 245000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x28 | hwrite=1 | hsize=2 | hburst=1 | hprot=0x2 | hwdata=0xbeef0002 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 275000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x28 Data=0xbeef0002 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 275000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x28, Burst=1, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 275000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xdeadbeef
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 275000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x28 Data=0xbeef0002 (Burst=1)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 285000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x2c | hwrite=1 | hsize=2 | hburst=1 | hprot=0x4 | hwdata=0xbeef0003 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 315000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x2c Data=0xbeef0003 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 315000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x2c, Burst=1, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 315000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xdeadbeef
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 315000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x2c Data=0xbeef0003 (Burst=1)
+# KERNEL: UVM_INFO /home/runner/ahb_sequence.sv(71) @ 325000: uvm_test_top.env.seqr@@seq [ahb_base_sequence] Starting Incremental Burst READ (4-beat)...
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 325000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x20 | hwrite=0 | hsize=2 | hburst=1 | hprot=0x4 | hwdata=0xf165eb98 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 355000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x20 Data=0xbeef0000 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 355000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x20, Burst=1, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 355000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xbeef0000
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 355000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x20 Data=0xbeef0000 (Burst=1)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 365000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x24 | hwrite=0 | hsize=2 | hburst=1 | hprot=0x8 | hwdata=0xb9217ece | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 395000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x24 Data=0xbeef0001 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 395000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x24, Burst=1, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 395000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xbeef0001
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 395000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x24 Data=0xbeef0001 (Burst=1)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 405000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x28 | hwrite=0 | hsize=2 | hburst=1 | hprot=0xa | hwdata=0xa4351a33 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 435000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x28 Data=0xbeef0002 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 435000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x28, Burst=1, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 435000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xbeef0002
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 435000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x28 Data=0xbeef0002 (Burst=1)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 445000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x2c | hwrite=0 | hsize=2 | hburst=1 | hprot=0x3 | hwdata=0x8b4b7882 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 475000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x2c Data=0xbeef0003 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 475000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x2c, Burst=1, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 475000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xbeef0003
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 475000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x2c Data=0xbeef0003 (Burst=1)
+# KERNEL: UVM_INFO /home/runner/ahb_sequence.sv(87) @ 485000: uvm_test_top.env.seqr@@seq [ahb_base_sequence] Starting WRAP4 Burst WRITE...
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 485000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x30 | hwrite=1 | hsize=2 | hburst=2 | hprot=0x0 | hwdata=0xface0000 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 515000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x30 Data=0xface0000 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 515000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x30, Burst=10, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 515000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xbeef0003
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 515000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x30 Data=0xface0000 (Burst=10)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 525000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x34 | hwrite=1 | hsize=2 | hburst=2 | hprot=0xe | hwdata=0xface0001 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 555000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x34 Data=0xface0001 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 555000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x34, Burst=10, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 555000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xbeef0003
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 555000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x34 Data=0xface0001 (Burst=10)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 565000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x38 | hwrite=1 | hsize=2 | hburst=2 | hprot=0x8 | hwdata=0xface0002 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 595000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x38 Data=0xface0002 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 595000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x38, Burst=10, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 595000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xbeef0003
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 595000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x38 Data=0xface0002 (Burst=10)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 605000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x3c | hwrite=1 | hsize=2 | hburst=2 | hprot=0x8 | hwdata=0xface0003 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(72) @ 635000: uvm_test_top.env.mon [ahb_monitor] WRITE captured: Addr=0x3c Data=0xface0003 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 635000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x3c, Burst=10, Write=1, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 635000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xbeef0003
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(48) @ 635000: uvm_test_top.env.sb [ahb_scoreboard] WRITE: Addr=0x3c Data=0xface0003 (Burst=10)
+# KERNEL: UVM_INFO /home/runner/ahb_sequence.sv(104) @ 645000: uvm_test_top.env.seqr@@seq [ahb_base_sequence] Starting WRAP4 Burst READ...
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 645000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x30 | hwrite=0 | hsize=2 | hburst=2 | hprot=0x2 | hwdata=0x0d6eeea0 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 675000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x30 Data=0xface0000 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 675000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x30, Burst=10, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 675000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xface0000
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 675000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x30 Data=0xface0000 (Burst=10)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 685000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x34 | hwrite=0 | hsize=2 | hburst=2 | hprot=0x2 | hwdata=0xbc27f337 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 715000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x34 Data=0xface0001 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 715000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x34, Burst=10, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 715000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xface0001
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 715000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x34 Data=0xface0001 (Burst=10)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 725000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x38 | hwrite=0 | hsize=2 | hburst=2 | hprot=0x0 | hwdata=0x5d0177a7 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 755000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x38 Data=0xface0002 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 755000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x38, Burst=10, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 755000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xface0002
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 755000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x38 Data=0xface0002 (Burst=10)
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(43) @ 765000: uvm_test_top.env.drv [ahb_driver] Driving Transaction :: AHB_TXN :: haddr=0x3c | hwrite=0 | hsize=2 | hburst=2 | hprot=0xe | hwdata=0x65ae1a96 | hrdata=0x00000000 | hsel=1 | hready=1 | hready_out=0 | hresp=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_monitor.sv(86) @ 795000: uvm_test_top.env.mon [ahb_monitor] READ captured: Addr=0x3c Data=0xface0003 HRESP=0x0
+# KERNEL: UVM_INFO /home/runner/ahb_subscriber.sv(81) @ 795000: uvm_test_top.env.sub [AHB_SUBSCRIBER] Coverage Sampling: Addr=0x3c, Burst=10, Write=0, Resp=0
+# KERNEL: UVM_INFO /home/runner/ahb_driver.sv(83) @ 795000: uvm_test_top.env.drv [ahb_driver] Response: hready_out=1 hresp=0x0 hrdata=0xface0003
+# KERNEL: UVM_INFO /home/runner/ahb_scoreboard.sv(65) @ 795000: uvm_test_top.env.sb [ahb_scoreboard] READ MATCH: Addr=0x3c Data=0xface0003 (Burst=10)
+# KERNEL: UVM_INFO /home/runner/ahb_sequence.sv(117) @ 805000: uvm_test_top.env.seqr@@seq [ahb_base_sequence] Completed AHB base sequence successfully.
+# KERNEL: UVM_INFO /home/runner/ahb_test.sv(61) @ 1005000: uvm_test_top [AHB_TEST] AHB Sequence completed successfully.
+# KERNEL: UVM_INFO /home/runner/ahb_test.sv(70) @ 1055000: uvm_test_top [AHB_TEST] Functional Coverage: 77.78%
+# KERNEL: UVM_INFO /home/runner/testbench.sv(96) @ 2000000: reporter [TB] Simulation finished after 2000ns
+# RUNTIME: Info: RUNTIME_0068 testbench.sv (97): $finish called.
+# KERNEL: Time: 2 us,  Iteration: 0,  Instance: /tb_ahb_slave,  Process: @INITIAL#94_3@.
+# KERNEL: stopped at time: 2 us
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+acdb save;
+acdb report -db fcover.acdb -txt -o cov.txt;
+exit
+# VSIM: Simulation has finished.
+Creating result.zip...
+  adding: .aldec/ (stored 0%)
+  adding: .aldec/Riviera-PRO/ (stored 0%)
+  adding: .aldec/Riviera-PRO/2023.04.112.8911/ (stored 0%)
+  adding: .aldec/Riviera-PRO/2023.04.112.8911/log/ (stored 0%)
+  adding: .aldec/Riviera-PRO/2023.04.112.8911/config/ (stored 0%)
+  adding: .aldec/Riviera-PRO/2023.04.112.8911/config/preferences/ (stored 0%)
+  adding: .aldec/Riviera-PRO/2023.04.112.8911/config/preferences/application.xml (deflated 12%)
+  adding: .aldec/Riviera-PRO/2023.04.112.8911/config/preferences/framework.xml (deflated 61%)
+  adding: .aldec/Riviera-PRO/2023.04.112.8911/config/setup.xml (deflated 10%)
+  adding: .aldec/Riviera-PRO/2023.04.112.8911/config/console.history (deflated 33%)
+  adding: tr_db.log (deflated 6%)
+  adding: work/ (stored 0%)
+  adding: work/1work.mgf (deflated 91%)
+  adding: work/0work.mgf (deflated 20%)
+  adding: work/slp/ (stored 0%)
+  adding: work/slp/4e70ff6e14b814b402b8b29a6d7314fc/ (stored 0%)
+  adding: work/slp/4e70ff6e14b814b402b8b29a6d7314fc/ext.gen (deflated 58%)
+  adding: work/slp/4e70ff6e14b814b402b8b29a6d7314fc/slp_model.so (deflated 73%)
+  adding: work/slp/4e70ff6e14b814b402b8b29a6d7314fc/slp_model.info (stored 0%)
+  adding: work/slp/4e70ff6e14b814b402b8b29a6d7314fc/slp_model_par.info (deflated 82%)
+  adding: work/slp/4e70ff6e14b814b402b8b29a6d7314fc/spi.gen (deflated 79%)
+  adding: work/slp/4e70ff6e14b814b402b8b29a6d7314fc/signal_split.info (deflated 70%)
+  adding: work/slp/slp_catalog.info (stored 0%)
+  adding: work/work.lib (deflated 85%)
+  adding: work/3work.mgf (deflated 5%)
+  adding: work/elaboration.log (deflated 96%)
+  adding: work/vcp_cmd.log (deflated 46%)
+  adding: library.cfg (deflated 9%)
+  adding: cov.txt (deflated 83%)
+  adding: fcover.acdb (deflated 95%)
+  adding: dataset.asdb (deflated 93%)
+  adding: .flexlmrc (stored 0%)
+  adding: ahb_test.sv (deflated 67%)
+  adding: ahb_transaction.sv (deflated 73%)
+  adding: ahb_driver.sv (deflated 71%)
+  adding: ahb_monitor.sv (deflated 71%)
+  adding: ahb_interface.sv (deflated 75%)
+  adding: ahb_sequence.sv (deflated 81%)
+  adding: ahb_scoreboard.sv (deflated 70%)
+  adding: testbench.sv (deflated 74%)
+  adding: design.sv (deflated 70%)
+  adding: ahb_sequencer.sv (deflated 41%)
+  adding: ACCELLERA_OVL_VHDL_LIB/ (stored 0%)
+  adding: ahb_subscriber.sv (deflated 67%)
+  adding: run.sh (deflated 44%)
+  adding: run.do (deflated 17%)
+  adding: ahb_env.sv (deflated 72%)
+  adding: .bash_profile (deflated 21%)
+  adding: .bash_logout (stored 0%)
+  adding: .bashrc (deflated 23%)
+[2025-11-07 14:26:06 UTC] Waiting for download...
+Done
